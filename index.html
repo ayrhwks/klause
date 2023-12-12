@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="./imagenes/adidasLogo.png" type="image/png">
+    <title>Krause - Compra de Pantalones</title>
+</head>
+
+<body>
+    <header class="header">
+        <nav>
+            <a href="/index.html">Acerca de</a>
+            <a href="/Pages/aboutUs.html">Acerca de</a>
+            <a href="/Pages/services.html">Servicios</a>
+            <a href="/Pages/contact.html">Contacto</a>
+        </nav>
+        <div id="carritoContainer">
+            <div id="carritoIcono">
+                <img src="./imagenes/carritodecompras.png" alt="Carrito de Compras">
+            </div>
+            <div id="carritoContenido">
+                <!-- Contenido del carrito se mostrará aquí -->
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="logo">
+            <img src="./imagenes/logonavbar.webp" alt="Logo de Krause" id="logo">
+        </div>
+        <h2><br>Krause<br>
+            Tu estilo único comienza aquí.
+        </h2>
+
+        <form id="formularioCompra">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <label for="apellido">Apellido:</label>
+            <input type="text" id="apellido" name="apellido" required>
+
+            <label for="direccion">Dirección:</label>
+            <input type="text" id="direccion" name="direccion" required>
+
+            <label for="modelo">Modelo de Pantalón:</label>
+            <div class="modelo-container" id="modeloContainer">
+                <div id="disponibilidadPantalones">
+                    <p id="cantidadPantalones"></p>
+                </div>
+                <!-- Los modelos de pantalones se agregarán aquí con JavaScript -->
+            </div>
+
+            <label>Talle:</label>
+            <div class="talleContainer" id="talleContainer">
+                <input type="radio" id="talleS" name="talle" value="S" required>
+                <label for="talleS">S</label>
+                <input type="radio" id="talleM" name="talle" value="M">
+                <label for="talleM">M</label>
+                <input type="radio" id="talleL" name="talle" value="L">
+                <label for="talleL">L</label>
+                <input type="radio" id="talleXL" name="talle" value="XL">
+                <label for="talleXL">XL</label>
+            </div>
+
+            <button type="button" id="comprarBtn" onclick="realizarCompra()">Comprar</button>
+        </form>
+    </div>
+    <div id="resultadosCompra"></div>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
